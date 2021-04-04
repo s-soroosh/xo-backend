@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "games",
+  "info": {
+    "name": "Game",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "moves": {
+      "collection": "move",
+      "via": "game"
+    },
+    "player1": {
+      "plugin": "admin",
+      "model": "user"
+    },
+    "player2": {
+      "plugin": "admin",
+      "model": "user"
+    }
+  }
+}

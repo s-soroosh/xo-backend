@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "moves",
+  "info": {
+    "name": "Move",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "game": {
+      "via": "moves",
+      "model": "game"
+    },
+    "x": {
+      "type": "integer"
+    },
+    "y": {
+      "type": "biginteger"
+    }
+  }
+}
