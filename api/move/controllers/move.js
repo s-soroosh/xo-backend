@@ -10,7 +10,7 @@ module.exports = {
   async create(ctx) {
 
     const move = ctx.request.body;
-    const game = await strapi.query("game").findOne({id: move.game});
+    const game = await strapi.query("game").findOne({code: move.game});
     const boardSize = game.size
     console.log({boardSize})
     if (game.winner) {
