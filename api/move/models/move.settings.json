@@ -19,7 +19,7 @@
       "type": "integer"
     },
     "y": {
-      "type": "biginteger"
+      "type": "integer"
     }
   }
 }

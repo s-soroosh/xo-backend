@@ -21,11 +21,23 @@
       "via": "game"
     },
     "player1": {
-      "plugin": "admin",
+      "plugin": "users-permissions",
       "model": "user"
     },
     "player2": {
-      "plugin": "admin",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "turn": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "size": {
+      "type": "integer",
+      "default": 3
+    },
+    "winner": {
+      "plugin": "users-permissions",
       "model": "user"
     }
   }
