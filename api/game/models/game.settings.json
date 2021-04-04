@@ -13,7 +13,7 @@
   "attributes": {
     "code": {
       "type": "string",
-      "required": true,
+      "required": false,
       "unique": true
     },
     "moves": {
