@@ -13,4 +13,8 @@ curl $URL/auth/local -H "Content-Type: application/json" -d '{"identifier":"myem
 curl $URL/games -H "Content-Type: application/json" -d '{"size":3}' -H "Authorization: Bearer ${TOKEN}"
 
 # join game
-curl $URL/games/join -H "Content-Type: application/json"  -H "Authorization: Bearer ${TOKEN}"
+curl $URL/games/join -H "Content-Type: application/json"  -H "Authorization: Bearer ${TOKEN}" -X POST
+
+
+# do a move on your turn
+curl $URL/moves -H "Content-Type: application/json"  -H "Authorization: Bearer ${TOKEN}" -d '{"code":"code of the game","x":0,"y":0}'
