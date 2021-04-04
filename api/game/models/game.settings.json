@@ -12,7 +12,9 @@
   },
   "attributes": {
     "code": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "moves": {
       "collection": "move",
