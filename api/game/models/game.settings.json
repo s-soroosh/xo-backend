@@ -17,8 +17,8 @@
       "unique": true
     },
     "moves": {
-      "collection": "move",
-      "via": "game"
+      "via": "game",
+      "collection": "move"
     },
     "player1": {
       "plugin": "users-permissions",

@@ -12,14 +12,18 @@
   },
   "attributes": {
     "game": {
-      "via": "moves",
-      "model": "game"
+      "model": "game",
+      "via": "moves"
     },
     "x": {
       "type": "integer"
     },
     "y": {
       "type": "integer"
+    },
+    "player": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

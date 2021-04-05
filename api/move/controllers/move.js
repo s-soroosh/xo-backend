@@ -33,6 +33,7 @@ module.exports = {
       throw Boom.badRequest("This move is already taken");
     }
 
+    move.player = turn;
     await strapi.query("move").create(move)
 
     game.moves.push(move)
