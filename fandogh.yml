@@ -3,3 +3,4 @@ name: xo-backend
 spec:
   image: sarabadani/xo-backend:latest
   port: 1337
+  image_pull_policy: Always
