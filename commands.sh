@@ -17,4 +17,4 @@ curl $URL/games/join -H "Content-Type: application/json"  -H "Authorization: Bea
 
 
 # do a move on your turn
-curl $URL/moves -H "Content-Type: application/json"  -H "Authorization: Bearer ${TOKEN}" -d '{"code":"code of the game","x":0,"y":0}'
+curl $URL/moves -H "Content-Type: application/json"  -H "Authorization: Bearer ${TOKEN}" -d '{"game":"code of the game","x":0,"y":0}'

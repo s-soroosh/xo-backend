@@ -27,13 +27,19 @@ module.exports = {
       player1
     })
 
-    return game
+    return game;
 
+  },
+
+  async findOne(ctx) {
+    const id = ctx.params.id
+    const game = await strapi.query("game").findOne({code: id})
+    return game;
   },
 
   async join(ctx) {
     const id = ctx.params.id
-    const game = await strapi.query("game").findOne({id})
+    const game = await strapi.query("game").findOne({code: id})
     const currentUser = ctx.state.user
 
     if (game.player1.id === currentUser.id) {
@@ -47,6 +53,6 @@ module.exports = {
       throw Boom.badRequest('Player cannot join this game')
     }
 
-    return "OK"
+    return game;
   }
 };

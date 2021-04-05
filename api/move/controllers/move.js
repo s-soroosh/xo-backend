@@ -34,6 +34,7 @@ module.exports = {
     }
 
     move.player = turn;
+    move.game = game.id
     await strapi.query("move").create(move)
 
     game.moves.push(move)
@@ -65,7 +66,7 @@ module.exports = {
     const newTurn = game.player1.id == ctx.state.user.id ? game.player2
       : game.player1
     game.turn = newTurn
-    await strapi.query("game").update({id: move.game}, game)
+    await strapi.query("game").update({code: game.code}, game)
     return game
 
   }
